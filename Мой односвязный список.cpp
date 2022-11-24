@@ -29,7 +29,7 @@ private:
 	{
 	public:
 		 
-		Node(T data = T(), Node* pNext = nullptr)                          ////////////////узнать про эту строчку кода
+		Node(T data = T(), Node* pNext = nullptr)                        
 		{
 			this->data = data;
 			this->pNext = pNext;
@@ -154,9 +154,9 @@ int main()
 
 
 	MyList<string>lst;
-	lst.push_back("Egor");
-	lst.push_back("Oleg");
-	lst.push_front("Kolya");
+	lst.push_back("first_msg");
+	lst.push_back("second_msg");
+	lst.push_front("third_msg");
 	
 	lst.insert("Max", 2);
 	for (int i = 0; i < lst.GetSize(); i++)
