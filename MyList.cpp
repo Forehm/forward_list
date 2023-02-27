@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -15,8 +15,9 @@ public:
 
 	void push_back(T data);
 	T& operator [](const int index);
-	int GetSize(){ return Size;}
+	int GetSize() { return Size; }
 	void pop_front();
+	void pop_back();
 	void clear();
 	void push_front(T data);
 	void insert(T data, const int index);
@@ -28,8 +29,8 @@ private:
 	class Node
 	{
 	public:
-		 
-		Node(T data = T(), Node* pNext = nullptr)                        
+
+		Node(T data = T(), Node* pNext = nullptr)
 		{
 			this->data = data;
 			this->pNext = pNext;
@@ -107,6 +108,18 @@ void MyList<T>::pop_front()
 	delete temp;
 	Size--;
 }
+template<typename T>
+void MyList<T>::pop_back()
+{
+	Node<T>* current = this->head;
+	while (current->pNext->pNext != nullptr)
+	{
+		current = current->pNext;
+	}
+	current->pNext = nullptr;
+	Size--;
+
+}
 
 template<typename T>
 void MyList<T>::clear()
@@ -139,34 +152,9 @@ void MyList<T>::insert(T data, const int index)
 			previous = previous->pNext;
 		}
 		previous->pNext = new Node<T>(data, previous->pNext);
-		
+
 	}
 	Size++;
 }
 
-
-
-
-
-int main()
-{
-	setlocale(LC_ALL, "ru");
-
-
-	MyList<string>lst;
-	lst.push_back("first_msg");
-	lst.push_back("second_msg");
-	lst.push_front("third_msg");
-	
-	lst.insert("Max", 2);
-	for (int i = 0; i < lst.GetSize(); i++)
-	{
-		cout << lst[i] << endl;
-	}
-
-	
-
-
-	return 0;
-}
 
