@@ -76,7 +76,7 @@ void MyList<T>::push_back(T data)
 		}
 		current->pNext = new Node<T>(data);
 	}
-	Size++;
+	++Size;
 
 }
 
@@ -102,7 +102,7 @@ void MyList<T>::pop_front()
 	Node<T>* temp = head;
 	head = head->pNext;
 	delete temp;
-	Size--;
+	--Size;
 }
 template<typename T>
 void MyList<T>::pop_back()
