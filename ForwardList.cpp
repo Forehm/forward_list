@@ -150,7 +150,7 @@ void MyList<T>::insert(T data, const int index)
 		previous->pNext = new Node<T>(data, previous->pNext);
 
 	}
-	Size++;
+	--Size;
 }
 
 
