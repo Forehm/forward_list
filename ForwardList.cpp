@@ -92,7 +92,7 @@ T& MyList<T>::operator[](const int index)
 			return current->data;
 		}
 		current = current->pNext;
-		counter++;
+		++counter;
 	}
 }
 
@@ -113,7 +113,7 @@ void MyList<T>::pop_back()
 		current = current->pNext;
 	}
 	current->pNext = nullptr;
-	Size--;
+	--Size;
 
 }
 
@@ -130,7 +130,7 @@ template <typename T>
 void MyList<T>::push_front(T data)
 {
 	head = new Node<T>(data, head);
-	Size++;
+	--Size;
 }
 
 template <typename T>
