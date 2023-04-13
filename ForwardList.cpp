@@ -38,7 +38,7 @@ private:
 	};
 
 
-	int Size;
+	int Size = 0;
 	Node<T>* head;
 
 
