@@ -7,15 +7,21 @@ class MyList
 {
 public:
 	MyList();
+	
 	~MyList();
 
-	void push_back(T data);
 	T& operator [](const int index);
+	
 	int GetSize() { return Size; }
+	
 	void pop_front();
 	void pop_back();
+	
 	void clear();
+	
 	void push_front(T data);
+	void push_back(T data);
+	
 	void insert(T data, const int index);
 
 
