@@ -103,6 +103,7 @@ void MyList<T>::pop_front()
 	delete temp;
 	--Size;
 }
+
 template<typename T>
 void MyList<T>::pop_back()
 {
