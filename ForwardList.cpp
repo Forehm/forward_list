@@ -1,7 +1,3 @@
-
-
-
-
 template <typename T>
 class MyList
 {
