@@ -42,8 +42,6 @@ private:
 
 	int Size = 0;
 	Node<T>* head;
-
-
 };
 
 
@@ -79,7 +77,6 @@ void MyList<T>::push_back(T data)
 		current->pNext = new Node<T>(data);
 	}
 	++Size;
-
 }
 
 template<typename T>
