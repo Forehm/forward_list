@@ -28,7 +28,6 @@ public:
 
 
 private:
-
 	template <typename T>
 	class Node
 	{
@@ -40,7 +39,6 @@ private:
 			this->pNext = pNext;
 		}
 
-
 		Node* pNext;
 		T data;
 	};
@@ -49,8 +47,6 @@ private:
 	int Size = 0;
 	Node<T>* head;
 };
-
-
 
 template <typename T>
 MyList<T>::MyList()
