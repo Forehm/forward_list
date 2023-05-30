@@ -9,7 +9,6 @@ class MyList
 {
 public:
 	MyList();
-	
 	~MyList();
 
 	T& operator [](const int index);
@@ -18,12 +17,9 @@ public:
 	
 	void pop_front();
 	void pop_back();
-	
 	void clear();
-	
 	void push_front(T data);
 	void push_back(T data);
-	
 	void insert(T data, const int index);
 
 
