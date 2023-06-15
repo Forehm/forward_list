@@ -38,14 +38,14 @@ private:
 	};
 
 
-	int Size = 0;
+	int Size_ = 0;
 	Node<T>* head;
 };
 
 template <typename T>
 MyList<T>::MyList()
 {
-	Size = 0;
+	Size_ = 0;
 	head = nullptr;
 }
 
@@ -72,7 +72,7 @@ void MyList<T>::push_back(T data)
 		}
 		current->pNext = new Node<T>(data);
 	}
-	++Size;
+	++Size_;
 }
 
 template<typename T>
@@ -97,7 +97,7 @@ void MyList<T>::pop_front()
 	Node<T>* temp = head;
 	head = head->pNext;
 	delete temp;
-	--Size;
+	--Size_;
 }
 
 template<typename T>
@@ -109,7 +109,7 @@ void MyList<T>::pop_back()
 		current = current->pNext;
 	}
 	current->pNext = nullptr;
-	--Size;
+	--Size_;
 
 }
 
@@ -126,7 +126,7 @@ template <typename T>
 void MyList<T>::push_front(T data)
 {
 	head = new Node<T>(data, head);
-	--Size;
+	--Size_;
 }
 
 template <typename T>
@@ -145,7 +145,7 @@ void MyList<T>::insert(T data, const int index)
 		}
 		previous->pNext = new Node<T>(data, previous->pNext);
 	}
-	--Size;
+	--Size_;
 }
 
 
