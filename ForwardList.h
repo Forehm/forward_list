@@ -59,7 +59,7 @@ template<typename T>
 void MyList<T>::push_back(T data)
 {
 
-	if (head == nullptr)
+	if (!head)
 	{
 		head = new Node<T>(data);
 	}
