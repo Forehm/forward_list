@@ -116,7 +116,7 @@ void MyList<T>::pop_back()
 template<typename T>
 void MyList<T>::clear()
 {
-	while (Size)
+	while (Size > 0)
 	{
 		pop_front();
 	}
