@@ -12,7 +12,7 @@ public:
 
 	T& operator [](const int index);
 	
-	int GetSize() { return Size; }
+	int GetSize() const noexcept { return Size; }
 	void pop_front();
 	void pop_back();
 	void clear();
