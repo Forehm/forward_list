@@ -37,7 +37,6 @@ private:
 		T data;
 	};
 
-
 	size_t Size_ = 0;
 	Node<T>* head;
 };
