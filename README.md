@@ -13,4 +13,4 @@ Functionality:
 7) clear() - erases all elements
 8) push_front(T data) - puts the element data in the beginning of the list
 9) push_back(T data) - puts the element data in the end of the list
-10) insert(T data, const int index) puts the element data in the next position 
+10) insert(T data, const int index) puts the element data in the position before index
