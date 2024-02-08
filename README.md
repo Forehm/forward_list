@@ -2,7 +2,7 @@
 
 It is just a simple realisation of forward_list from STL. Many methods from original STL container absent here, but it is still quite interesting to read to understand how this container works :)  
 I update it and try to do it better :)
-### Requirements: C++14 and x86
+### Requirements: C++14 and x86/x64
 #### Functionality:
 1) MyList() - default constructor
 2) ~MyList() - destructor
