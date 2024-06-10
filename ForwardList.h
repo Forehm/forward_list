@@ -54,7 +54,7 @@ MyList<T>::~MyList()
 }
 
 template<typename T>
-void MyList<T>::push_back(T&& data)
+void MyList<T>::push_back(const T&& data)
 {
 
 	if (!head)
