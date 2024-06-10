@@ -54,7 +54,7 @@ MyList<T>::~MyList()
 }
 
 template<typename T>
-void MyList<T>::push_back(T data)
+void MyList<T>::push_back(T&& data)
 {
 
 	if (!head)
@@ -121,7 +121,7 @@ void MyList<T>::clear()
 }
 
 template <typename T>
-void MyList<T>::push_front(T data)
+void MyList<T>::push_front(T&& data)
 {
 	head = new Node<T>(data, head);
 	--Size_;
