@@ -15,8 +15,8 @@ public:
 	void pop_front();
 	void pop_back();
 	void clear();
-	void push_front(T&& data);
-	void push_back(T&& data);
+	void push_front(const T&& data);
+	void push_back(const T&& data);
 	void insert(T data, const int index);
 
 
